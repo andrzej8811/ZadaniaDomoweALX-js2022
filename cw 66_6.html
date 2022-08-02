@@ -1,0 +1,47 @@
+<script>
+  //utworz dwie 10 elementowe tablice z losowymi wartosciami od 1-20; kazda tablica posiada rozne wartosci; napisz programn, ktory wypisze najwieksza liczbe wyst w obu tablicach
+
+  //stworz 2 tablice
+  let liczby1 = [];
+  let liczby2 = [];
+  let duplikaty = [];
+
+  let max = 0;
+
+  for (let i = 0; i <= 9; i++) {
+    let los1 = Math.floor(Math.random() * 20 + 1);
+    liczby1.push(los1);
+  }
+
+  for (let j = 0; j <= 9; j++) {
+    let los2 = Math.floor(Math.random() * 20 + 1);
+    liczby2.push(los2);
+  }
+  //wypisz 2 tablice losowe wartosci
+  console.log(liczby1);
+  console.log(liczby2);
+
+  //szukanie duplikatow
+
+  for (let i = 0; i < liczby1.length; i++) {
+    for (let j = 0; j < liczby2.length; j++) {
+      if (liczby1[i] === liczby2[j]) {
+        console.log("duplikat", liczby1[i], liczby2[j]);
+        duplikaty.push(liczby1[i]);
+      }
+    }
+  }
+
+  console.log(duplikaty);
+  for (let x of duplikaty) {
+    console.log(x);
+    if (x == 0) {
+      //przy wartosci i==1 nie liczylo w sytuacji gdy wylosowalo jako 1 1
+    } else {
+      if (x > max) {
+        max = x;
+      }
+    }
+  }
+  console.log(`Wartość duplikatu maksymalna to :${max}`);
+</script>
