@@ -1,0 +1,18 @@
+<script>
+  //napisz program, ktory liczy pole oraz obwód prostokąta
+
+  var boka = parseInt(prompt("Ile wynosi pierwszy bok prostokąta? "));
+  var bokb = parseInt(prompt("Ile wynosi drugi bok prostokąta? "));
+  var dzialanie = parseInt(prompt("Co chcesz policzyc? 1 - pole, 2 - obwód"));
+
+  var pole = boka * bokb;
+  var obwod = boka + boka + bokb + bokb;
+
+  if (dzialanie == 1) {
+    console.log(`Pole prostokata to: ${pole}`);
+  } else if (dzialanie == 2) {
+    console.log(`Obwód prostokąta to: ${obwod}`);
+  } else {
+    console.log(`Błędne dane`);
+  }
+</script>

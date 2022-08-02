@@ -1,0 +1,19 @@
+<script>
+  // Napisz program, ktory liczy pole jakiejs figury
+
+  var figura = parseInt(prompt("Jaka figura? 1 - prostokąt, 2 - trójkąt"));
+
+  if (figura == 1) {
+    var boka = parseInt(prompt("Podaj długość boku a: "));
+    var bokb = parseInt(prompt("Podaj długośc boku b: "));
+    var poleProstokat = boka * bokb;
+    console.log(`Pole prostokąta to: ${poleProstokat}`);
+  } else if (figura == 2) {
+    var podst = parseInt(prompt("Podaj długość podstawy trójkąta: "));
+    var wysokosc = parseInt(prompt("Podaj wysokość trójkąta: "));
+    var poleTrojkat = (podst * wysokosc) / 2;
+    console.log(`Pole trójąta to: ${poleTrojkat}`);
+  } else {
+    console.log(`Błędne dane`);
+  }
+</script>

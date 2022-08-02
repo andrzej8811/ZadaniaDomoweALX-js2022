@@ -1,0 +1,12 @@
+<script>
+  //Napisz program, ktory pobiera od uzytkownika 15 liczb i oblicza sume tylko tych, ktore sa parzyste
+  var suma = 0;
+
+  for (var i = 1; i <= 15; i++) {
+    var liczba = parseInt(prompt("Podaj liczbe: "));
+    if (liczba % 2 == 0) {
+      suma = suma + liczba;
+    }
+  }
+  console.log(suma);
+</script>
